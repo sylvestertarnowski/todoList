@@ -1,9 +1,3 @@
-// //Check Off specific todos by clicking
-// //if li is gray
-// if($(this).css("color") === "gray") {
-//   console.log("It is currently gray");
-// }
-
 $("ul").on("click", "li", function() {
   $(this).toggleClass("completed");
 });
@@ -16,6 +10,7 @@ $("ul").on("click", "span", function(event) {
   event.stopPropagation();
 });
 
+//on key press 13 (Enter) add another todo
 $("input[type='text']").keypress(function(event) {
   if(event.which === 13) {
     let todoText = $(this).val();
